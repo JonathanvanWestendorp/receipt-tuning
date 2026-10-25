@@ -13,9 +13,6 @@ Test split, 100 receipts, greedy decoding. Field F1 compares the (field, value) 
 
 Notes:
 - LoRA ranks 8, 16 and 64 scored 0.900, 0.887 and 0.888 on the validation split, which is the same within noise. Rank 8 was used.
-- Three test outputs were looked at while debugging the first baseline.
 - The key list in the second prompt was taken from the training labels, so that baseline knows the label vocabulary.
 - About a quarter of the remaining errors look like label formatting (separators, stray punctuation). The rest are misread values and fields the labels have or skip.
-- CORD is Indonesian receipts, not client data.
-
-Code: `receipts.py` (data and metric), `eval.py`, `train.py`, `grpo.py`, `vm.sh` (spot GPU helper).
+- CORD is Indonesian receipts.
