@@ -1,4 +1,4 @@
-"""python eval.py NAME [ADAPTER_DIR[,ADAPTER_DIR]] -> results/NAME.json. Greedy decoding. Env: SPLIT=validation, SCHEMA=1 (full-schema prompt)."""
+"""python eval.py NAME [ADAPTER_DIR[,ADAPTER_DIR]] -> results/NAME.json. Env: SPLIT=validation, SCHEMA=1."""
 import json
 import os
 import sys
@@ -19,7 +19,7 @@ model = AutoModelForImageTextToText.from_pretrained(MODEL, dtype=torch.bfloat16,
 if adapter:
     from peft import PeftModel
 
-    for a in adapter.split(","):  # comma-separated = stacked, e.g. out/sft_r8,out/grpo_150
+    for a in adapter.split(","):
         model = PeftModel.from_pretrained(model, a).merge_and_unload()
 
 texts, t0 = [], time.time()
@@ -33,7 +33,7 @@ for i in range(0, len(test), B):
     texts += processor.batch_decode(out[:, batch["input_ids"].shape[1] :], skip_special_tokens=True)
 secs = time.time() - t0
 
-scores = np.array([score(t, g) for t, g in zip(texts, test["gt"])])  # columns: valid, f1
+scores = np.array([score(t, g) for t, g in zip(texts, test["gt"])])
 boot = [scores[np.random.default_rng(s).integers(0, len(scores), len(scores)), 1].mean() for s in range(1000)]
 summary = {"name": name, "n": len(texts), "valid_json": scores[:, 0].mean(), "f1": scores[:, 1].mean(),
            "f1_ci95": [np.percentile(boot, 2.5), np.percentile(boot, 97.5)], "sec_per_receipt": secs / len(texts), "batch": B}

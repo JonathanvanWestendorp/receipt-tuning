@@ -1,18 +1,18 @@
-"""Shared bits: CORD-v2 -> (prompt, image, target) and the reward/metric used for every table row."""
+"""CORD-v2 loading, parsing, and the metric and reward used for every row."""
 import json
 import re
 from collections import Counter
 
 from datasets import load_dataset
 
-MODEL = "mistralai/Ministral-3-3B-Instruct-2512-BF16"  # Base-2512 is the optional ablation
+MODEL = "mistralai/Ministral-3-3B-Instruct-2512-BF16"
 PROMPT = "Extract this receipt as JSON with keys menu (list of nm, cnt, price), sub_total and total. Output JSON only."
 SCHEMA_PROMPT = PROMPT + """ Use exactly CORD's keys and copy every value as a string, as printed on the receipt.
 menu: list of items with nm (name), cnt (quantity), price, and where printed unitprice, num, discountprice.
 sub_total: subtotal_price, tax_price, service_price, discount_price, etc.
 total: total_price, cashprice, changeprice, creditcardprice, emoneyprice, menuqty_cnt.
 Example: {"menu": [{"nm": "ICE TEA", "cnt": "2", "price": "20,000"}], "sub_total": {"subtotal_price": "20,000", "tax_price": "2,000"}, "total": {"total_price": "22,000", "cashprice": "25,000", "changeprice": "3,000"}}"""
-MAX_SIDE = 1024  # caps image tokens; a few CORD images are 2304x4096
+MAX_SIDE = 1024
 
 
 def load(split, n=None, prompt=PROMPT):
@@ -36,7 +36,7 @@ def load(split, n=None, prompt=PROMPT):
 
 def parse(text):
     """Model output -> dict, or None if it is not a JSON object."""
-    m = re.search(r"\{.*\}", text, re.S)  # tolerates ```json fences and chatter
+    m = re.search(r"\{.*\}", text, re.S)
     try:
         out = json.loads(m.group(0)) if m else None
     except json.JSONDecodeError:
@@ -45,7 +45,6 @@ def parse(text):
 
 
 def flatten(x, path=""):
-    # menu is a list for most receipts but a bare dict for one-item ones; this treats both the same
     if isinstance(x, dict):
         return [p for k, v in x.items() for p in flatten(v, f"{path}.{k}" if path else k)]
     if isinstance(x, list):
@@ -54,7 +53,6 @@ def flatten(x, path=""):
 
 
 def f1(pred, gt):
-    # ponytail: multiset of (field, value) pairs ignores item order; swap for Hungarian matching if that matters
     a, b = Counter(flatten(pred)), Counter(flatten(gt))
     tp = sum((a & b).values())
     if not tp:
@@ -70,7 +68,6 @@ def score(text, gt):
 
 
 def reward(completions, gt, **kwargs):
-    # GRPO passes conversational completions as [{"role": "assistant", "content": str}]
     texts = [c[0]["content"] if isinstance(c, list) else c for c in completions]
     return [0.2 * v + 0.8 * f for v, f in (score(t, g) for t, g in zip(texts, gt))]
 

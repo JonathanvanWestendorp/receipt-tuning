@@ -13,7 +13,6 @@ from receipts import MODEL, load
 r = int(sys.argv[1])
 processor = AutoProcessor.from_pretrained(MODEL, fix_mistral_regex=True)
 model = AutoModelForImageTextToText.from_pretrained(MODEL, dtype=torch.bfloat16, device_map="cuda")
-# alpha = 2r keeps the update scale fixed, so only capacity differs between ranks; vision tower stays frozen
 lora = LoraConfig(r=r, lora_alpha=2 * r, lora_dropout=0.05,
                   target_modules=r".*language_model.*\.(q_proj|k_proj|v_proj|o_proj|gate_proj|up_proj|down_proj)")
 args = SFTConfig(output_dir=f"out/sft_r{r}", num_train_epochs=2, per_device_train_batch_size=1, gradient_accumulation_steps=8,

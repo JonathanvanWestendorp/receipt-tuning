@@ -1,4 +1,4 @@
-"""Day-0 gate. `python smoke.py data` runs anywhere; `sft` and `grpo` need a CUDA GPU (bf16, ~40 GB)."""
+"""python smoke.py data|tokens|sft|grpo"""
 import sys
 
 from receipts import MODEL, load, reward
@@ -6,25 +6,24 @@ from receipts import MODEL, load, reward
 stage = sys.argv[1]
 train = load("train", 50)
 
-if stage == "data":  # no torch needed (the Intel Mac here is stuck on torch 2.2.2, which transformers 5 rejects)
+if stage == "data":
     ex = train[0]
     print(ex["prompt"], ex["completion"][0]["content"][:200], ex["image"].size, sep="\n")
     sys.exit()
 
-import torch  # noqa: E402  (deferred so the data stage works without a usable torch)
+import torch  # noqa: E402
 from peft import LoraConfig  # noqa: E402
 from transformers import AutoModelForImageTextToText, AutoProcessor  # noqa: E402
 from trl import GRPOConfig, GRPOTrainer, SFTConfig, SFTTrainer  # noqa: E402
 
 processor = AutoProcessor.from_pretrained(MODEL, fix_mistral_regex=True)
-if stage == "tokens":  # prompt length incl. image tokens; checks the processor and chat template
+if stage == "tokens":
     msg = [{"role": "user", "content": [{"type": "image"}, {"type": "text", "text": train[0]["prompt"][0]["content"]}]}]
     text = processor.apply_chat_template(msg, add_generation_prompt=True)
     print("prompt tokens incl. image:", processor(text=text, images=train[0]["image"], return_tensors="pt")["input_ids"].shape[1])
     sys.exit()
 
 model = AutoModelForImageTextToText.from_pretrained(MODEL, dtype=torch.bfloat16, device_map="cuda")
-# language-model layers only; the vision tower has same-named projections and stays frozen
 lora = LoraConfig(r=16, target_modules=r".*language_model.*\.(q_proj|k_proj|v_proj|o_proj|gate_proj|up_proj|down_proj)")
 
 if stage == "sft":

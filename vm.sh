@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Spot L4 in europe-west4. Preemption or the 6 h limit STOPS it (disk kept); `start` resumes, `down` deletes it and the disk.
 # Usage: ./vm.sh up | sync | run "cmd" | setup | ssh | pull | start | down
 set -e
 export CLOUDSDK_ACTIVE_CONFIG_NAME=personal
