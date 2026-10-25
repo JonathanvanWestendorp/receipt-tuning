@@ -1,4 +1,4 @@
-"""python eval.py NAME [ADAPTER_DIR] -> results/NAME.json. Greedy decoding on the 100 CORD test receipts."""
+"""python eval.py NAME [ADAPTER_DIR] -> results/NAME.json. Greedy decoding. Env: SPLIT=validation, SCHEMA=1 (full-schema prompt)."""
 import json
 import os
 import sys
@@ -8,11 +8,11 @@ import numpy as np
 import torch
 from transformers import AutoModelForImageTextToText, AutoProcessor
 
-from receipts import MODEL, load, score
+from receipts import MODEL, PROMPT, SCHEMA_PROMPT, load, score
 
 name, adapter = sys.argv[1], (sys.argv[2] if len(sys.argv) > 2 else None)
 B = int(os.environ.get("BATCH", 1))
-test = load("test")
+test = load(os.environ.get("SPLIT", "test"), prompt=SCHEMA_PROMPT if os.environ.get("SCHEMA") else PROMPT)
 processor = AutoProcessor.from_pretrained(MODEL, fix_mistral_regex=True)
 processor.tokenizer.padding_side = "left"
 model = AutoModelForImageTextToText.from_pretrained(MODEL, dtype=torch.bfloat16, device_map="cuda").eval()

@@ -12,7 +12,7 @@ up)
         --provisioning-model=SPOT --instance-termination-action=STOP --max-run-duration=6h \
         --image-family=common-cu129-ubuntu-2204-nvidia-580 --image-project=deeplearning-platform-release \
         --boot-disk-size=200GB ;;
-sync) gcloud compute scp --zone=$Z receipts.py smoke.py eval.py $VM:~ ;;
+sync) gcloud compute scp --zone=$Z receipts.py smoke.py eval.py train.py sweep.sh $VM:~ ;;
 setup) gcloud compute ssh $VM --zone=$Z --command \
     'nvidia-smi -L && curl -LsSf https://astral.sh/uv/install.sh | sh && ~/.local/bin/uv venv --python 3.12 venv && ~/.local/bin/uv pip install -q --python venv/bin/python torch torchvision "transformers>=5" trl peft datasets pillow mistral-common' ;;
 run) gcloud compute ssh $VM --zone=$Z --command "$2" ;;

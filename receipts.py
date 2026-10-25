@@ -7,10 +7,15 @@ from datasets import load_dataset
 
 MODEL = "mistralai/Ministral-3-3B-Instruct-2512-BF16"  # Base-2512 is the optional ablation
 PROMPT = "Extract this receipt as JSON with keys menu (list of nm, cnt, price), sub_total and total. Output JSON only."
+SCHEMA_PROMPT = PROMPT + """ Use exactly CORD's keys and copy every value as a string, as printed on the receipt.
+menu: list of items with nm (name), cnt (quantity), price, and where printed unitprice, num, discountprice.
+sub_total: subtotal_price, tax_price, service_price, discount_price, etc.
+total: total_price, cashprice, changeprice, creditcardprice, emoneyprice, menuqty_cnt.
+Example: {"menu": [{"nm": "ICE TEA", "cnt": "2", "price": "20,000"}], "sub_total": {"subtotal_price": "20,000", "tax_price": "2,000"}, "total": {"total_price": "22,000", "cashprice": "25,000", "changeprice": "3,000"}}"""
 MAX_SIDE = 1024  # caps image tokens; a few CORD images are 2304x4096
 
 
-def load(split, n=None):
+def load(split, n=None, prompt=PROMPT):
     ds = load_dataset("naver-clova-ix/cord-v2", split=split)
     if n:
         ds = ds.select(range(n))
@@ -20,7 +25,7 @@ def load(split, n=None):
         img.thumbnail((MAX_SIDE, MAX_SIDE))
         gt = json.loads(ex["ground_truth"])["gt_parse"]
         return {
-            "prompt": [{"role": "user", "content": PROMPT}],
+            "prompt": [{"role": "user", "content": prompt}],
             "completion": [{"role": "assistant", "content": json.dumps(gt, ensure_ascii=False)}],
             "image": img,
             "gt": json.dumps(gt, ensure_ascii=False),
