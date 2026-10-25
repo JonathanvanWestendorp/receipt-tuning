@@ -14,7 +14,7 @@ up)
         --boot-disk-size=200GB ;;
 sync) gcloud compute scp --zone=$Z receipts.py smoke.py $VM:~ ;;
 setup) gcloud compute ssh $VM --zone=$Z --command \
-    'nvidia-smi -L && pip install -q uv && ~/.local/bin/uv venv --python 3.12 venv && ~/.local/bin/uv pip install -q --python venv/bin/python torch "transformers>=5" trl peft datasets pillow mistral-common' ;;
+    'nvidia-smi -L && sudo apt-get install -y -q python3-pip >/dev/null && python3 -m pip install -q --user uv && ~/.local/bin/uv venv --python 3.12 venv && ~/.local/bin/uv pip install -q --python venv/bin/python torch "transformers>=5" trl peft datasets pillow mistral-common' ;;
 ssh) gcloud compute ssh $VM --zone=$Z ;;
 pull) gcloud compute scp --recurse --zone=$Z "$VM:~/out" "$VM:~/results" . ;;
 down) gcloud compute instances delete $VM --zone=$Z --quiet ;;
