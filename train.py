@@ -17,7 +17,7 @@ model = AutoModelForImageTextToText.from_pretrained(MODEL, dtype=torch.bfloat16,
 lora = LoraConfig(r=r, lora_alpha=2 * r, lora_dropout=0.05,
                   target_modules=r".*language_model.*\.(q_proj|k_proj|v_proj|o_proj|gate_proj|up_proj|down_proj)")
 args = SFTConfig(output_dir=f"out/sft_r{r}", num_train_epochs=2, per_device_train_batch_size=1, gradient_accumulation_steps=8,
-                 learning_rate=2e-4, lr_scheduler_type="cosine", warmup_ratio=0.05, max_length=None, bf16=True,
+                 learning_rate=2e-4, lr_scheduler_type="cosine", warmup_steps=0.05, max_length=None, bf16=True,
                  logging_steps=5, save_strategy="epoch", report_to="none", seed=0)
 trainer = SFTTrainer(model=model, args=args, train_dataset=load("train"), processing_class=processor, peft_config=lora)
 trainer.train()

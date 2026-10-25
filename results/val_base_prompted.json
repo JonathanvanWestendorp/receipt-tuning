@@ -1,0 +1,518 @@
+{
+ "summary": {
+  "name": "val_base_prompted",
+  "n": 100,
+  "valid_json": 0.99,
+  "f1": 0.2512349884096793,
+  "f1_ci95": [
+   0.21655840213586205,
+   0.2840019614416779
+  ],
+  "sec_per_receipt": 4.874035987854004,
+  "batch": 1
+ },
+ "outputs": [
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"REAL GANACHE\", \"cnt\": 1, \"price\": 16500},\n    {\"nm\": \"EGG TART\", \"cnt\": 1, \"price\": 13000},\n    {\"nm\": \"PIZZA TOAST\", \"cnt\": 1, \"price\": 16000}\n  ],\n  \"sub_total\": 45500,\n  \"total\": 45500,\n  \"cash_change\": 4500\n}\n```",
+  "```json\n{\n  \"receipt\": {\n    \"menu\": [\n      {\n        \"nm\": \"Kopi Susu Kolonel\",\n        \"cnt\": 1,\n        \"price\": 23.000\n      }\n    ],\n    \"sub_total\": 23.000,\n    \"total\": 27.000,\n    \"tips\": 50.000\n  }\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"S-Ovaltine\",\n      \"cnt\": 1,\n      \"price\": 20000\n    }\n  ],\n  \"discount\": {\n    \"discount_percent\": 50\n  },\n  \"sub_total\": 1818,\n  \"tax\": 1818,\n  \"total\": 20000,\n  \"total_with_tax\": 20000,\n  \"payment_method\": \"PB1\",\n  \"cash_given\": 100000,\n  \"change\": 80000,\n  \"tax_included\": true\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"M-Caramel Black Tea\",\n      \"cnt\": 1,\n      \"price\": 28000\n    }\n  ],\n  \"sub_total\": 28000,\n  \"total\": 28000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"BBQ Chicken - Sedang\",\n      \"cnt\": 1,\n      \"price\": 41000\n    }\n  ],\n  \"sub_total\": 41000,\n  \"total\": 41000\n}\n```",
+  "```json\n{\n  \"receipt\": {\n    \"menu\": [\n      {\n        \"nm\": \"LE MINERAL\",\n        \"cnt\": 1,\n        \"price\": 6.000\n      }\n    ],\n    \"sub_total\": 7.275,\n    \"tax_amount\": 727,\n    \"total\": {\n      \"amount\": 8.000,\n      \"cash\": 8.000\n    }\n  }\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"POTATO SAUSAGE BREAD\", \"cnt\": 1, \"price\": 19000},\n    {\"nm\": \"OREO GREEN TEA SPREAD\", \"cnt\": 1, \"price\": 52000},\n    {\"nm\": \"WHITE CHOCO BANANA SPREAD\", \"cnt\": 1, \"price\": 52000}\n  ],\n  \"sub_total\": 123000,\n  \"total\": 123000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Choco Devil\",\n      \"cnt\": 4,\n      \"price\": 63.636\n    }\n  ],\n  \"sub_total\": 63.636,\n  \"discount\": 9.545,\n  \"pb1\": 5.409,\n  \"total\": 59.500,\n  \"cash\": 100.000,\n  \"change\": 40.500\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"TALAH UNGU\",\n      \"cnt\": 3,\n      \"price\": 6500\n    },\n    {\n      \"nm\": \"DISC ITEM\",\n      \"cnt\": 4,\n      \"price\": -7800,\n      \"discount\": 40.00\n    },\n    {\n      \"nm\": \"MIKA KECIL\",\n      \"cnt\": 1,\n      \"price\": 0\n    }\n  ],\n  \"sub_total\": 11700,\n  \"total\": 11700,\n  \"cash_change\": 8300\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Tahu Ikan Oma Giok\",\n      \"cnt\": 1,\n      \"price\": 20000\n    }\n  ],\n  \"sub_total\": 20000,\n  \"total\": 20000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"Serbu 1\", \"cnt\": 2, \"price\": 40.000},\n    {\"nm\": \"Choco Peanut Bread\", \"cnt\": 2, \"price\": 20.000}\n  ],\n  \"sub_total\": 60.000,\n  \"total\": 60.000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"Se'I Sapi Sambal Matah (R)\", \"cnt\": 1, \"price\": 20.000},\n    {\"nm\": \"Se'I Sapi Lada Hitam (J)\", \"cnt\": 1, \"price\": 35.000},\n    {\"nm\": \"Nasi Putih\", \"cnt\": 2, \"price\": 10.000},\n    {\"nm\": \"Milk Shake Coklat\", \"cnt\": 1, \"price\": 16.000}\n  ],\n  \"sub_total\": 81.000,\n  \"total\": 89.100\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Es Kopi Susu\",\n      \"cnt\": 4,\n      \"price\": 72.000\n    }\n  ],\n  \"sub_total\": 72.000,\n  \"total\": 72.000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"MINERAL 600 ML\", \"cnt\": 1, \"price\": 7727},\n    {\"nm\": \"BULGOGI RICE R\", \"cnt\": 1, \"price\": 33636}\n  ],\n  \"sub_total\": 41364,\n  \"total\": 45500\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"Arem Arem\", \"cnt\": 2, \"price\": 12000},\n    {\"nm\": \"Kroket\", \"cnt\": 1, \"price\": 12000}\n  ],\n  \"sub_total\": 36000,\n  \"total\": 39600\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"Arem Arem\", \"cnt\": 2, \"price\": 12000},\n    {\"nm\": \"Pepenero Pastel\", \"cnt\": 2, \"price\": 15000}\n  ],\n  \"sub_total\": 54000,\n  \"total\": 59400\n}\n```",
+  "```json\n{\n  \"receipt\": {\n    \"menu\": [\n      {\n        \"nm\": \"Item 1\",\n        \"cnt\": 1,\n        \"price\": 20000\n      },\n      {\n        \"nm\": \"Item 2\",\n        \"cnt\": 1,\n        \"price\": 20000\n      },\n      {\n        \"nm\": \"Item 3\",\n        \"cnt\": 1,\n        \"price\": 100000\n      },\n      {\n        \"nm\": \"Item 4\",\n        \"cnt\": 1,\n        \"price\": 80000\n      }\n    ],\n    \"sub_total\": 160000,\n    \"total\": 160000,\n    \"total_cash_change\": {\n      \"total\": 200000,\n      \"cash\": 40000\n    }\n  }\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Lemonade\",\n      \"cnt\": \"1\",\n      \"price\": 20000\n    }\n  ],\n  \"sub_total\": 20000,\n  \"total\": 20000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"beef c roll\", \"cnt\": 3, \"price\": 10000},\n    {\"nm\": \"kaya bred\", \"cnt\": 1, \"price\": 15000}\n  ],\n  \"sub_total\": 25000,\n  \"total\": 25000,\n  \"cash\": 100000,\n  \"change\": 75000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"FUTAMI 17 GREEN TEA (CLAS)\", \"cnt\": 1, \"price\": 12500},\n    {\"nm\": \"EGG TART\", \"cnt\": 1, \"price\": 13000},\n    {\"nm\": \"GRAIN CROQUE MONSIEUR\", \"cnt\": 1, \"price\": 17000}\n  ],\n  \"sub_total\": 42500,\n  \"total\": 42500\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"JAMUR\", \"cnt\": 2, \"price\": 10000},\n    {\"nm\": \"TAHU\", \"cnt\": 1, \"price\": 5000}\n  ],\n  \"sub_total\": 15000,\n  \"total\": 16500,\n  \"discount\": {\"type\": \"PB1\", \"percentage\": 10, \"amount\": 1500},\n  \"cash\": {\"amount\": 20000, \"change\": 3500}\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"Mango Lemon Tea\", \"cnt\": 1, \"price\": \"Rp29,090\"},\n    {\"nm\": \"Sliders Set\", \"cnt\": 1, \"price\": \"Rp113,636\"},\n    {\"nm\": \"Chicken Vege Rice Bowl\", \"cnt\": 1, \"price\": \"Rp86,363\"}\n  ],\n  \"sub_total\": \"Rp194,726\",\n  \"tax\": \"Rp20,446\",\n  \"total\": \"Rp224,908\"\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"RedVelvet Nutella\", \"cnt\": 1, \"price\": 280000},\n    {\"nm\": \"Free Mini Candle\", \"cnt\": 0.5, \"price\": 0},\n    {\"nm\": \"1 Large Box\", \"cnt\": 1, \"price\": 0}\n  ],\n  \"sub_total\": 280000,\n  \"total\": 308000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"BUBBLE GUM\",\n      \"cnt\": 1,\n      \"price\": 18182\n    }\n  ],\n  \"sub_total\": 18182,\n  \"tax\": 1818,\n  \"total\": 20000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"Pain au Chocolat\", \"cnt\": 1, \"price\": 11000},\n    {\"nm\": \"Choco Custard Pastry\", \"cnt\": 1, \"price\": 12000},\n    {\"nm\": \"Milk Pastry Roll\", \"cnt\": 1, \"price\": 9000},\n    {\"nm\": \"Real Cheese Inside Bread\", \"cnt\": 1, \"price\": 13500},\n    {\"nm\": \"Sausage Bread\", \"cnt\": 1, \"price\": 15000},\n    {\"nm\": \"Ham Cheese Flat Bread\", \"cnt\": 1, \"price\": 20000}\n  ],\n  \"sub_total\": 80500,\n  \"total\": 80500\n}\n```",
+  "```json\n{\n  \"receipt\": {\n    \"date\": \"2013-10-07\",\n    \"menu\": [\n      {\"nm\": \"Sop Sui Jiao\", \"cnt\": 1, \"price\": 33000},\n      {\"nm\": \"Ha Kaou Udng\", \"cnt\": 1, \"price\": 28000},\n      {\"nm\": \"Sio May Kpting\", \"cnt\": 1, \"price\": 23500},\n      {\"nm\": \"Siomay Kmbinasi\", \"cnt\": 1, \"price\": 23000},\n      {\"nm\": \"Leng Hong Kien\", \"cnt\": 1, \"price\": 30000},\n      {\"nm\": \"Mie Kokung Trsi\", \"cnt\": 1, \"price\": 35500},\n      {\"nm\": \"Es Teh Tawar\", \"cnt\": 1, \"price\": 7000}\n    ],\n    \"sub_total\": 180000,\n    \"service_charge\": 9000,\n    \"pb1\": 18900,\n    \"total\": 207900,\n    \"total_items\": 7,\n    \"total_others\": 7\n  }\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"Nasi Merah/Putih\", \"cnt\": 1, \"price\": 5000},\n    {\"nm\": \"Sayur\", \"cnt\": 2, \"price\": 4000},\n    {\"nm\": \"Kerupuk/Sambel\", \"cnt\": 1, \"price\": 2000},\n    {\"nm\": \"Ayam\", \"cnt\": 1, \"price\": 14000},\n    {\"nm\": \"Minuman Kemasan/Refill\", \"cnt\": 1, \"price\": 6000}\n  ],\n  \"sub_total\": 35000,\n  \"total\": 35000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Thai Iced Tea\",\n      \"cnt\": 1,\n      \"price\": 16363\n    }\n  ],\n  \"sub_total\": 16363,\n  \"tax\": 1636,\n  \"total\": 17799\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Elephant Read Bean\",\n      \"cnt\": 1,\n      \"price\": 12000\n    },\n    {\n      \"nm\": \"Chapsal Twister Donut\",\n      \"cnt\": 1,\n      \"price\": 10000\n    }\n  ],\n  \"sub_total\": 22000,\n  \"total\": 22000\n}\n```",
+  "```json\n{\n  \"receipt\": {\n    \"menu\": [\n      {\n        \"nm\": \"Sabun Beras 1\",\n        \"cnt\": 1,\n        \"price\": 30000\n      },\n      {\n        \"nm\": \"Kembalian\",\n        \"cnt\": 1,\n        \"price\": 20000\n      }\n    ],\n    \"sub_total\": 30000,\n    \"total\": 50000\n  }\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"REDBEAN BREAD\", \"cnt\": 1, \"price\": 9000},\n    {\"nm\": \"FRANKFRUIT S/USAGE ROLL\", \"cnt\": 1, \"price\": 12000}\n  ],\n  \"sub_total\": 21000,\n  \"total\": 29000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Premium Toast Pan Bread\",\n      \"cnt\": 1,\n      \"price\": 24000\n    }\n  ],\n  \"sub_total\": 24000,\n  \"total\": 24000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Nasi (MLY)\",\n      \"cnt\": 1,\n      \"price\": 6.000\n    }\n  ],\n  \"sub_total\": 6.000,\n  \"total\": 6.000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"grains pan bread\", \"cnt\": 1, \"price\": 20500},\n    {\"nm\": \"iced hibiscus lychee tea\", \"cnt\": 1, \"price\": 37000}\n  ],\n  \"sub_total\": 57500,\n  \"total\": 57500,\n  \"gift_card_used\": {\n    \"amount\": 50000,\n    \"reference\": \"GIFT50 811923270311\"\n  },\n  \"cash_paid\": 7500,\n  \"change\": 0\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"Grilled Baby Potato\", \"cnt\": 1, \"price\": 50.500},\n    {\"nm\": \"Truffle Cream\", \"cnt\": 1, \"price\": 76.000},\n    {\"nm\": \"Carbonara\", \"cnt\": 1, \"price\": 70.500},\n    {\"nm\": \"Original Brewed Tea\", \"cnt\": 2, \"price\": 46.000}\n  ],\n  \"sub_total\": 243.000,\n  \"taxes\": {\n    \"SVC_CHG\": {\n      \"percentage\": 6,\n      \"amount\": 14.580\n    },\n    \"PB1\": {\n      \"percentage\": 10,\n      \"amount\": 25.758\n    }\n  },\n  \"total\": 283.338\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"BLACK PEPPER MEATBALL\", \"cnt\": 1, \"price\": 76500},\n    {\"nm\": \"QUARTO FORMAGGI PASTA\", \"cnt\": 1, \"price\": 82500},\n    {\"nm\": \"GREEN TEA WITH CRUMBLE\", \"cnt\": 1, \"price\": 56000},\n    {\"nm\": \"ORIGINAL BREWED TEA\", \"cnt\": 2, \"price\": 46000}\n  ],\n  \"sub_total\": 261000,\n  \"total\": 304326\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"Soft Dri 3 Top\", \"cnt\": 1, \"price\": 17.272},\n    {\"nm\": \"Top Oreo\", \"cnt\": 1, \"price\": 0},\n    {\"nm\": \"Top Banana\", \"cnt\": 1, \"price\": 0}\n  ],\n  \"sub_total\": 17.272,\n  \"total\": 18.999\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"Ice Lemon Tea\", \"cnt\": 1, \"price\": 13.636},\n    {\"nm\": \"Gyro Platter - Regular\", \"cnt\": 1, \"price\": 50.000}\n  ],\n  \"sub_total\": 63.636,\n  \"total\": 70.000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"1\",\n      \"cnt\": \"20,000\",\n      \"price\": \"20,000\"\n    },\n    {\n      \"nm\": \"2\",\n      \"cnt\": \"100,000\",\n      \"price\": \"80,000\"\n    }\n  ],\n  \"sub_total\": \"20,000\",\n  \"total\": \"100,000\"\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"PKT TELOR/PERKAPEL\", \"cnt\": 1, \"price\": 26000},\n    {\"nm\": \"TERONG\", \"cnt\": 1, \"price\": 12000},\n    {\"nm\": \"PARU\", \"cnt\": 1, \"price\": 23000},\n    {\"nm\": \"SBL GR ATI/AMPL\", \"cnt\": 1, \"price\": 20000},\n    {\"nm\": \"NESTLE 330 ML\", \"cnt\": 5, \"price\": 8000}\n  ],\n  \"sub_total\": 89000,\n  \"total\": 97900\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"Gojek Chicken\", \"cnt\": 1, \"price\": 95000},\n    {\"nm\": \"Chilli Sauce H\", \"cnt\": 1, \"price\": 180000},\n    {\"nm\": \"Soy Sauce F\", \"cnt\": 1, \"price\": 70000},\n    {\"nm\": \"Gojek French Fries\", \"cnt\": 1, \"price\": 70000}\n  ],\n  \"sub_total\": 345000,\n  \"total\": 379500\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"SOGOGI JAPCHAE\", \"cnt\": 1, \"price\": 150000},\n    {\"nm\": \"GONG GIBAB\", \"cnt\": 7, \"price\": 105000},\n    {\"nm\": \"CHULPAN CHEESE\", \"cnt\": 1, \"price\": 230000},\n    {\"nm\": \"DAK GALBI\", \"cnt\": 1, \"price\": 95000},\n    {\"nm\": \"CREAM TEOK PO KI\", \"price\": 120000},\n    {\"nm\": \"EL KEUN\", \"cnt\": 1, \"price\": 120000},\n    {\"nm\": \"HWANGTAE\", \"cnt\": 1, \"price\": 620000},\n    {\"nm\": \"SUNDUBU (TUKBEGI)\", \"cnt\": 2, \"price\": 290000},\n    {\"nm\": \"CHAM KKOT SAL\", \"cnt\": 2, \"price\": 390000},\n    {\"nm\": \"U SAM GYEOP\", \"cnt\": 2, \"price\": 290000},\n    {\"nm\": \"ICE COFFEE MIX\", \"cnt\": 0, \"price\": 0},\n    {\"nm\": \"ICE BLACK COFFEE\", \"cnt\": 3, \"price\": 71100}\n  ],\n  \"sub_total\": 2000000,\n  \"tax\": 212460,\n  \"service\": 140000,\n  \"total\": 2352460\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"STIX CINNAMON\", \"cnt\": 1, \"price\": 19.00},\n    {\"nm\": \"CINNAMON SUGAR\", \"cnt\": 1, \"price\": 17.00},\n    {\"nm\": \"TRIPLE CHEESE\", \"cnt\": 1, \"price\": 17.00}\n  ],\n  \"sub_total\": 53.00,\n  \"total\": 53.00\n}\n```",
+  "```json\n{\n  \"receipt\": {\n    \"menu\": [\n      {\n        \"nm\": \"ROTI UNYIL\",\n        \"cnt\": 170,\n        \"price\": 272.000\n      },\n      {\n        \"nm\": \"PAPER BAG BESAR\",\n        \"cnt\": 1,\n        \"price\": 6.000\n      }\n    ],\n    \"sub_total\": 278.000,\n    \"total\": 278.000,\n    \"change\": 22.000,\n    \"amount_paid\": 300.000,\n    \"total_quantity\": 171\n  }\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Thai Iced Tea\",\n      \"cnt\": 1,\n      \"price\": 16363\n    }\n  ],\n  \"sub_total\": 16363,\n  \"tax\": 1636,\n  \"total\": 17799\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"ADP Seafood\", \"cnt\": 1, \"price\": \"85,000\"},\n    {\"nm\": \"Omurice Katsu Curry\", \"cnt\": 1, \"price\": \"95,000\"},\n    {\"nm\": \"Earl Gray Tea\", \"cnt\": 1, \"price\": \"35,000\"},\n    {\"nm\": \"Hot Tea\", \"cnt\": 1, \"price\": \"25,000\"}\n  ],\n  \"sub_total\": \"240,000\",\n  \"total\": \"287,760\"\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Marble Castela\",\n      \"cnt\": 1,\n      \"price\": 22000\n    }\n  ],\n  \"sub_total\": 22000,\n  \"total\": 22000,\n  \"change\": 0\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Seaweed Chicken - Sedang\",\n      \"cnt\": 1,\n      \"price\": 42000\n    }\n  ],\n  \"sub_total\": 42000,\n  \"total\": 42000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"SB 1 OR\", \"cnt\": 1, \"price\": 28636},\n    {\"nm\": \"Chokocha Fit\", \"cnt\": 1, \"price\": 13636},\n    {\"nm\": \"Bbq Bento\", \"cnt\": 1, \"price\": 13636}\n  ],\n  \"sub_total\": 55908,\n  \"total\": 61500\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"Nasi Campur Bali\", \"cnt\": 1, \"price\": 52.000},\n    {\"nm\": \"Lemon\", \"cnt\": 1, \"price\": 22.000}\n  ],\n  \"sub_total\": 74.000,\n  \"tax\": 7.400,\n  \"total\": 81.400\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Chocolate \u00c9clair\",\n      \"cnt\": 2,\n      \"price\": 13000\n    }\n  ],\n  \"sub_total\": 26000,\n  \"total\": 26000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"Round Wagyu (1gr)\", \"cnt\": 118, \"price\": 47.200},\n    {\"nm\": \"Wagyu Rice Box\", \"cnt\": 1, \"price\": 10.000}\n  ],\n  \"sub_total\": 57.200,\n  \"total\": 57.200\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"KENTIR\", \"cnt\": 2, \"price\": 42.000},\n    {\"nm\": \"KOL GORENG\", \"cnt\": 2, \"price\": 6.000},\n    {\"nm\": \"TEH MANIS\", \"cnt\": 2, \"price\": 8.000}\n  ],\n  \"sub_total\": 56.000,\n  \"total\": 56.000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"Large\", \"cnt\": 1, \"price\": 11.000},\n    {\"nm\": \"Rhum\", \"cnt\": 1, \"price\": 0},\n    {\"nm\": \"Pastry Keju\", \"cnt\": 1, \"price\": 20.000},\n    {\"nm\": \"Plastik KCl\", \"cnt\": 1, \"price\": 0}\n  ],\n  \"sub_total\": 31.000,\n  \"total\": 31.000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Blueberry Fuji\",\n      \"cnt\": 1,\n      \"price\": 40.000\n    },\n    {\n      \"nm\": \"Plastic Rag Small\",\n      \"cnt\": 0,\n      \"price\": 0\n    }\n  ],\n  \"sub_total\": 40.000,\n  \"total\": 40.000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"Cha Keaw L...\", \"cnt\": 2, \"price\": 60.000},\n    {\"nm\": \"Cha Keaw L...\", \"cnt\": 1, \"price\": 60.000}  // Assuming the second entry is another item with the same name and price\n  ],\n  \"sub_total\": 60.000,\n  \"total\": 60.000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Thai Iced T.\",\n      \"cnt\": 1,\n      \"price\": 20.00\n    }\n  ],\n  \"sub_total\": 20.00,\n  \"total\": 20.00\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"Seafood Marinara\", \"cnt\": 1, \"price\": 85.00},\n    {\"nm\": \"Creamy Marinara Salmon\", \"cnt\": 1, \"price\": 85.50},\n    {\"nm\": \"Lychee Ice Tea\", \"cnt\": 2, \"price\": 77.00}\n  ],\n  \"sub_total\": 247.50,\n  \"total\": 288.585\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Viet Milk Coffee\",\n      \"cnt\": 1,\n      \"price\": 25000\n    }\n  ],\n  \"sub_total\": 25000,\n  \"total\": 25000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"XLB Org Pork 10x\", \"cnt\": 1, \"price\": 78000},\n    {\"nm\": \"Sicito Babi\", \"cnt\": 1, \"price\": 65000},\n    {\"nm\": \"Hotplate Tahu\", \"cnt\": 1, \"price\": 58000},\n    {\"nm\": \"DF Fish Fillet Garlic\", \"cnt\": 1, \"price\": 108000},\n    {\"nm\": \"LM Pork Belly\", \"cnt\": 1, \"price\": 88000},\n    {\"nm\": \"Siew Mai\", \"cnt\": 1, \"price\": 38800},\n    {\"nm\": \"Kwan Yin Cup\", \"cnt\": 5, \"price\": 50000},\n    {\"nm\": \"Herbal Jelly\", \"cnt\": 1, \"price\": 38000},\n    {\"nm\": \"Onde-Onde\", \"cnt\": 1, \"price\": 38000}\n  ],\n  \"sub_total\": 561800,\n  \"total\": 664329\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Vanilla Choco Heart Cake\",\n      \"cnt\": 1,\n      \"price\": 180000\n    }\n  ],\n  \"sub_total\": 180000,\n  \"total\": 180000,\n  \"payment_method\": \"Visa Card\"\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"Populaire Chocolate\", \"cnt\": 1, \"price\": 4500},\n    {\"nm\": \"Paddle Pop Choco Magma\", \"cnt\": 1, \"price\": 3000}\n  ],\n  \"sub_total\": 7500,\n  \"total\": 8250\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"French Fries\", \"cnt\": 1, \"price\": \"10,909\"},\n    {\"nm\": \"Cheese Burger\", \"cnt\": 2, \"price\": \"36,364\"},\n    {\"nm\": \"Milo\", \"cnt\": 1, \"price\": \"9,091\"}\n  ],\n  \"sub_total\": \"56,364\",\n  \"total\": \"62,000\"\n}\n```",
+  "```json\n{\n  \"receipt\": {\n    \"menu\": [\n      {\n        \"nm\": \"ISI CAMPUR\",\n        \"cnt\": 1,\n        \"price\": 43.636\n      },\n      {\n        \"nm\": \"A. MINERAL BOTOL\",\n        \"cnt\": 1,\n        \"price\": 8.000\n      }\n    ],\n    \"sub_total\": 51.636,\n    \"tax\": 5.164,\n    \"total\": 56.800,\n    \"grand_total\": 56.800,\n    \"tunai\": 110.000,\n    \"kemarli\": 53.200\n  }\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"WHOLE WHEAT PAN BREAD\",\n      \"cnt\": 1,\n      \"price\": 20000\n    }\n  ],\n  \"sub_total\": 20000,\n  \"total\": 20000,\n  \"change\": 80000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"BASO TAHU\", \"cnt\": 1, \"price\": 43.636},\n    {\"nm\": \"NASI PUTIH\", \"cnt\": 1, \"price\": 6.000}\n  ],\n  \"sub_total\": 49.636,\n  \"total\": 54.600\n}\n```",
+  "```json\n{\n  \"receipt\": {\n    \"menu\": [\n      {\n        \"nm\": \"Air Mineral\",\n        \"cnt\": 1,\n        \"price\": 7000\n      }\n    ],\n    \"sub_total\": 7000,\n    \"total\": 7000\n  }\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"PAKET BER2\", \"cnt\": 1, \"price\": 69091},\n    {\"nm\": \"BREAD N CHEESE DEL\", \"cnt\": 1, \"price\": \"\"},\n    {\"nm\": \"MAC N CHEESE DEL\", \"cnt\": 1, \"price\": \"\"},\n    {\"nm\": \"PEPSI DEL\", \"cnt\": 1, \"price\": \"\"},\n    {\"nm\": \"P/P THUOSAND ISL DEL\", \"cnt\": 1, \"price\": \"\"},\n    {\"nm\": \"LIPTON ICE TEA DEL\", \"cnt\": 1, \"price\": \"\"}\n  ],\n  \"sub_total\": 69091,\n  \"tax\": 6909,\n  \"total\": 76000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Honey Mandarin\",\n      \"cnt\": 2,\n      \"price\": 13000\n    }\n  ],\n  \"sub_total\": 26000,\n  \"total\": 26000,\n  \"cash_change\": 4000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"SOTO MEDIAN + NAPS\u0130\", \"cnt\": 1, \"price\": 59.500},\n    {\"nm\": \"SABUN-KARDO\", \"cnt\": 1, \"price\": 34.500},\n    {\"nm\": \"SOTO BETAM\u0130 + NAPS\u0130\", \"cnt\": 1, \"price\": 57.500}\n  ],\n  \"sub_total\": 151.500,\n  \"service_charge\": 7.555,\n  \"tax_rate\": 10,\n  \"total\": 174.555\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"Karaage Curry Teishoku\", \"cnt\": 1, \"price\": \"69,000\"},\n    {\"nm\": \"Lemon Plate\", \"cnt\": 1, \"price\": \"19,000\"},\n    {\"nm\": \"Ocha Hot\", \"cnt\": 1, \"price\": \"15,000\"}\n  ],\n  \"sub_total\": \"103,000\",\n  \"total\": \"121,790\"\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Dum Dum Thai Coffee\",\n      \"cnt\": 1,\n      \"price\": 19000\n    },\n    {\n      \"nm\": \"Ice\",\n      \"cnt\": 1,\n      \"price\": 1000\n    }\n  ],\n  \"sub_total\": 20000,\n  \"total\": 20000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"STIX CINNAMON\", \"cnt\": 1, \"price\": 19000},\n    {\"nm\": \"TRIPLE CHEESE\", \"cnt\": 1, \"price\": 17000}\n  ],\n  \"sub_total\": 36000,\n  \"total\": 36000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"ICED TT\",\n      \"cnt\": \"multiple items (barcodes visible, exact count not clear)\",\n      \"price\": \"20,000\"\n    },\n    {\n      \"nm\": \"50,000\",\n      \"cnt\": \"1\",\n      \"price\": \"50,000\"\n    },\n    {\n      \"nm\": \"30,000\",\n      \"cnt\": \"1\",\n      \"price\": \"30,000\"\n    }\n  ],\n  \"sub_total\": \"20,000\",\n  \"total\": \"20,000\"\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Thai Iced Tea\",\n      \"cnt\": 1,\n      \"price\": 20.000\n    }\n  ],\n  \"sub_total\": 20.000,\n  \"total\": 20.000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"KFC Winger HC\", \"cnt\": 2, \"price\": 40000},\n    {\"nm\": \"Ori Bento\", \"cnt\": 1, \"price\": 13636},\n    {\"nm\": \"Mango Float\", \"cnt\": 1, \"price\": 5909},\n    {\"nm\": \"F.Wngr GES-HC\", \"cnt\": 1, \"price\": 0},\n    {\"nm\": \"CHARGE TA\", \"cnt\": 1, \"price\": 909}\n  ],\n  \"sub_total\": 60454,\n  \"total\": 66500\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Enting2 Dua Bandeng Ori\",\n      \"cnt\": 1,\n      \"price\": 31.000\n    },\n    {\n      \"nm\": \"TAHU BAKSO Grg Ayam VC [biji]\",\n      \"cnt\": 10,\n      \"price\": 6.800\n    }\n  ],\n  \"sub_total\": 99.000,\n  \"total\": 99.000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Cheese Tart\",\n      \"cnt\": \"1\",\n      \"price\": \"Rp58000.00\"\n    }\n  ],\n  \"sub_total\": \"Rp58000.00\",\n  \"tax\": \"Rp5272.73\",\n  \"total\": \"Rp58000.00\",\n  \"customer_paid\": \"Rp100000.00\",\n  \"customer_change\": \"Rp42000.00\"\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"Mineral Water\", \"cnt\": 2, \"price\": 18000},\n    {\"nm\": \"Teh Tawar Dingin\", \"cnt\": 1, \"price\": 11000},\n    {\"nm\": \"Soto Betawi\", \"cnt\": 2, \"price\": 116000},\n    {\"nm\": \"Nasi Putih\", \"cnt\": 1, \"price\": 9000}\n  ],\n  \"sub_total\": 154000,\n  \"total\": 177870\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"Crab Stick\", \"cnt\": 1, \"price\": 9000},\n    {\"nm\": \"Bakso Lobster\", \"cnt\": 1, \"price\": 10000},\n    {\"nm\": \"Sawi Putih\", \"cnt\": 1, \"price\": 7000},\n    {\"nm\": \"Jamur Enoki\", \"cnt\": 1, \"price\": 8000},\n    {\"nm\": \"Jamur Kuping\", \"cnt\": 1, \"price\": 8000},\n    {\"nm\": \"Maling\", \"cnt\": 2, \"price\": 12000},\n    {\"nm\": \"Nasi (MLY)\", \"cnt\": 1, \"price\": 6000}\n  ],\n  \"sub_total\": 72000,\n  \"total\": 72000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Sate Padang\",\n      \"cnt\": 1,\n      \"price\": 25000\n    }\n  ],\n  \"sub_total\": 25000,\n  \"total\": 25000,\n  \"payment_method\": \"Cash\"\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"SURIMI\", \"cnt\": 1, \"price\": \"29,091\"},\n    {\"nm\": \"CREAMY CHK CL9 FTC\", \"cnt\": 1, \"price\": \"42,727\"},\n    {\"nm\": \"MIX 4 FUN CHOCOLATE\", \"cnt\": 1, \"price\": \"19,091\"},\n    {\"nm\": \"GREEN ITSODA PITCHER\", \"cnt\": 1, \"price\": \"60,909\"},\n    {\"nm\": \"SC/R GRILLED STEAK\", \"cnt\": 1, \"price\": \"99,091\"}\n  ],\n  \"sub_total\": \"250,909\",\n  \"total\": \"276,000\"\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"PEARL CHOCOLATE TEA\", \"cnt\": 1, \"price\": 17.000},\n    {\"nm\": \"GREEN TEA LYCHEE\", \"cnt\": 1, \"price\": 18.000},\n    {\"nm\": \"TUTUP SEAL\", \"cnt\": 2, \"price\": 0},\n    {\"nm\": \"CUP 14 OZ\", \"cnt\": 2, \"price\": 0}\n  ],\n  \"sub_total\": 35.000,\n  \"total\": 35.000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"S-Milk tea\",\n      \"cnt\": \"1x\",\n      \"price\": \"17,000\"\n    }\n  ],\n  \"sub_total\": \"17,000\",\n  \"total\": \"17,000\"\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"HAZELNUT CHOCO MT (R)\", \"cnt\": 1, \"price\": 24000},\n    {\"nm\": \"PEARL (R)\", \"cnt\": 1, \"price\": 4000},\n    {\"nm\": \"HAZELNUT CHOCO MT (R)\", \"cnt\": 1, \"price\": 24000}\n  ],\n  \"sub_total\": 52000,\n  \"total\": 52000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Peanut & Cheese\",\n      \"cnt\": 1,\n      \"price\": 13.636\n    }\n  ],\n  \"sub_total\": 13.636,\n  \"total\": 15.000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"LEMONADE\",\n      \"cnt\": 1,\n      \"price\": 26000\n    }\n  ],\n  \"sub_total\": 26000,\n  \"total\": 26000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"M-Passion Fruit Mac\",\n      \"cnt\": 1,\n      \"price\": 29000\n    }\n  ],\n  \"discount\": {\n    \"type\": \"25%\",\n    \"applied\": true\n  },\n  \"sub_total\": 29000,\n  \"total\": 29000,\n  \"payment\": {\n    \"cash\": 30000,\n    \"change\": 1000\n  }\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"Pizza\", \"cnt\": \"1\", \"price\": \"154,545\"},\n    {\"nm\": \"Paket Berapa Up3\", \"cnt\": \"1\", \"price\": \"154,545\"},\n    {\"nm\": \"Bread & Cheese Del\", \"cnt\": \"1\", \"price\": \"N/A\"},\n    {\"nm\": \"Tuna Del\", \"cnt\": \"1\", \"price\": \"N/A\"},\n    {\"nm\": \"Crabstick Fusilli Del\", \"cnt\": \"1\", \"price\": \"N/A\"},\n    {\"nm\": \"Lemon Tea Hangat Del\", \"cnt\": \"1\", \"price\": \"N/A\"},\n    {\"nm\": \"Blackcurrant Del\", \"cnt\": \"1\", \"price\": \"N/A\"},\n    {\"nm\": \"Sc/P Thousands Is Del\", \"cnt\": \"1\", \"price\": \"N/A\"},\n    {\"nm\": \"Scsc/P BBQ Beef Del\", \"cnt\": \"1\", \"price\": \"N/A\"},\n    {\"nm\": \"Cr/P Beef Mayo Del\", \"cnt\": \"1\", \"price\": \"N/A\"},\n    {\"nm\": \"Sunrise Italian Soda\", \"cnt\": \"1\", \"price\": \"N/A\"},\n    {\"nm\": \"Sunrise Italian Soda\", \"cnt\": \"1\", \"price\": \"N/A\"}\n  ],\n  \"sub_total\": \"154,545\",\n  \"tax\": \"15,455\",\n  \"total\": \"170,000\"\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Chocochip & Walnut\",\n      \"cnt\": 1,\n      \"price\": 29.000\n    },\n    {\n      \"nm\": \"Plastic Bag Swall\",\n      \"cnt\": 0,\n      \"price\": 0\n    }\n  ],\n  \"sub_total\": 29.000,\n  \"total\": 29.000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Regular\",\n      \"cnt\": 2,\n      \"price\": 3500.00\n    }\n  ],\n  \"sub_total\": 70000.00,\n  \"total\": 70000.00\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"ADD CHICKEN BOX\",\n      \"cnt\": \"1\",\n      \"price\": \"39,091\"\n    }\n  ],\n  \"sub_total\": \"40,000\",\n  \"tax\": {\n    \"rate\": \"10%\",\n    \"amount\": \"4,000\"\n  },\n  \"total\": \"44,000\",\n  \"payment\": {\n    \"cash\": \"Rp. 50,000\",\n    \"change\": \"Rp. 6,000\"\n  }\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"FC Winger HC\",\n      \"cnt\": 1,\n      \"price\": 20000\n    }\n  ],\n  \"charge_tax\": 903,\n  \"sub_total\": 20309,\n  \"discount\": {\n    \"percentage\": 10,\n    \"amount\": 2091\n  },\n  \"total\": {\n    \"amount\": 23000,\n    \"currency\": \"\u20b9\"\n  },\n  \"payment\": {\n    \"cash\": 25000,\n    \"kembali\": 2000\n  }\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\"nm\": \"Paket Ber4\", \"cnt\": 1, \"price\": 138.182},\n    {\"nm\": \"Bread n Cheese Del\", \"cnt\": 1, \"price\": 138.182},\n    {\"nm\": \"Crabstick Fusilli Del\", \"cnt\": 1, \"price\": null},\n    {\"nm\": \"Lime Squash Del\", \"cnt\": 2, \"price\": null},\n    {\"nm\": \"P/P Spicy Tuna Del\", \"cnt\": 1, \"price\": null},\n    {\"nm\": \"P/P Thousand Island Del\", \"cnt\": 1, \"price\": null},\n    {\"nm\": \"Beef Corn\", \"cnt\": 1, \"price\": null},\n    {\"nm\": \"Sunrise Italian Soda\", \"cnt\": 1, \"price\": null},\n    {\"nm\": \"Lipton Ice Tea Del\", \"cnt\": 1, \"price\": null},\n    {\"nm\": \"50% Chicken Royal\", \"cnt\": 1, \"price\": 138.182}\n  ],\n  \"sub_total\": 156.364,\n  \"tax\": 15.436,\n  \"total\": 172.000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Emily's Shrimp Scampi Fettucine\",\n      \"cnt\": 1,\n      \"price\": 69.000\n    }\n  ],\n  \"sub_total\": 69.000,\n  \"total\": 80.100\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"SAYAP\",\n      \"cnt\": 1,\n      \"price\": 13636\n    },\n    {\n      \"nm\": \"PAHA BAWAH\",\n      \"cnt\": 1,\n      \"price\": 13636\n    }\n  ],\n  \"sub_total\": 27272,\n  \"discount\": {\n    \"type\": \"P Resto 10%\",\n    \"amount\": 2700\n  },\n  \"total\": 30000,\n  \"tendered\": 50000,\n  \"change\": 20000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Choco Cheese\",\n      \"cnt\": 1,\n      \"price\": 13.636\n    }\n  ],\n  \"discount\": -2.045,\n  \"pr1\": 1.159,\n  \"sub_total\": 13.636,\n  \"total\": 12.750\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Lemon Tea (L)\",\n      \"cnt\": 1,\n      \"price\": 25.000\n    }\n  ],\n  \"sub_total\": 25.000,\n  \"total\": 25.000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Hulk Topper Package\",\n      \"cnt\": 1,\n      \"price\": 100.000\n    }\n  ],\n  \"sub_total\": 100.000,\n  \"total\": 100.000\n}\n```",
+  "```json\n{\n  \"menu\": [\n    {\n      \"nm\": \"Giant Squid\",\n      \"cnt\": 1,\n      \"price\": \"Rp. 39.000\"\n    }\n  ],\n  \"sub_total\": \"Rp. 39.000\",\n  \"total\": \"Rp. 39.000\"\n}\n```"
+ ],
+ "scores": [
+  [
+   1.0,
+   0.5
+  ],
+  [
+   1.0,
+   0.0
+  ],
+  [
+   1.0,
+   0.0909090909090909
+  ],
+  [
+   1.0,
+   0.12500000000000003
+  ],
+  [
+   1.0,
+   0.12500000000000003
+  ],
+  [
+   1.0,
+   0.0
+  ],
+  [
+   1.0,
+   0.5454545454545454
+  ],
+  [
+   1.0,
+   0.2105263157894737
+  ],
+  [
+   1.0,
+   0.14814814814814817
+  ],
+  [
+   1.0,
+   0.3636363636363636
+  ],
+  [
+   1.0,
+   0.47058823529411764
+  ],
+  [
+   1.0,
+   0.45161290322580644
+  ],
+  [
+   1.0,
+   0.1818181818181818
+  ],
+  [
+   1.0,
+   0.4210526315789474
+  ],
+  [
+   1.0,
+   0.2
+  ],
+  [
+   1.0,
+   0.380952380952381
+  ],
+  [
+   1.0,
+   0.0
+  ],
+  [
+   1.0,
+   0.15384615384615385
+  ],
+  [
+   1.0,
+   0.1818181818181818
+  ],
+  [
+   1.0,
+   0.43478260869565216
+  ],
+  [
+   1.0,
+   0.33333333333333337
+  ],
+  [
+   1.0,
+   0.41379310344827586
+  ],
+  [
+   1.0,
+   0.18181818181818182
+  ],
+  [
+   1.0,
+   0.28571428571428575
+  ],
+  [
+   1.0,
+   0.2926829268292683
+  ],
+  [
+   1.0,
+   0.0
+  ],
+  [
+   1.0,
+   0.0
+  ],
+  [
+   1.0,
+   0.14285714285714288
+  ],
+  [
+   1.0,
+   0.2
+  ],
+  [
+   1.0,
+   0.0
+  ],
+  [
+   1.0,
+   0.23529411764705882
+  ],
+  [
+   1.0,
+   0.1818181818181818
+  ],
+  [
+   1.0,
+   0.3636363636363636
+  ],
+  [
+   1.0,
+   0.1818181818181818
+  ],
+  [
+   1.0,
+   0.2222222222222222
+  ],
+  [
+   1.0,
+   0.4666666666666667
+  ],
+  [
+   1.0,
+   0.08333333333333334
+  ],
+  [
+   1.0,
+   0.11764705882352941
+  ],
+  [
+   1.0,
+   0.13333333333333333
+  ],
+  [
+   1.0,
+   0.1818181818181818
+  ],
+  [
+   1.0,
+   0.2857142857142857
+  ],
+  [
+   1.0,
+   0.37974683544303806
+  ],
+  [
+   1.0,
+   0.3703703703703703
+  ],
+  [
+   1.0,
+   0.0
+  ],
+  [
+   1.0,
+   0.14285714285714288
+  ],
+  [
+   1.0,
+   0.7333333333333334
+  ],
+  [
+   1.0,
+   0.14285714285714288
+  ],
+  [
+   1.0,
+   0.12500000000000003
+  ],
+  [
+   1.0,
+   0.3846153846153846
+  ],
+  [
+   1.0,
+   0.09999999999999999
+  ],
+  [
+   1.0,
+   0.1818181818181818
+  ],
+  [
+   1.0,
+   0.47058823529411764
+  ],
+  [
+   1.0,
+   0.41666666666666663
+  ],
+  [
+   1.0,
+   0.19999999999999998
+  ],
+  [
+   1.0,
+   0.1
+  ],
+  [
+   0.0,
+   0.0
+  ],
+  [
+   1.0,
+   0.0
+  ],
+  [
+   1.0,
+   0.24999999999999994
+  ],
+  [
+   1.0,
+   0.2857142857142857
+  ],
+  [
+   1.0,
+   0.5573770491803278
+  ],
+  [
+   1.0,
+   0.1818181818181818
+  ],
+  [
+   1.0,
+   0.36363636363636365
+  ],
+  [
+   1.0,
+   0.64
+  ],
+  [
+   1.0,
+   0.0
+  ],
+  [
+   1.0,
+   0.3333333333333333
+  ],
+  [
+   1.0,
+   0.4761904761904762
+  ],
+  [
+   1.0,
+   0.0
+  ],
+  [
+   1.0,
+   0.1081081081081081
+  ],
+  [
+   1.0,
+   0.15384615384615383
+  ],
+  [
+   1.0,
+   0.23076923076923078
+  ],
+  [
+   1.0,
+   0.6153846153846153
+  ],
+  [
+   1.0,
+   0.22222222222222224
+  ],
+  [
+   1.0,
+   0.1
+  ],
+  [
+   1.0,
+   0.25000000000000006
+  ],
+  [
+   1.0,
+   0.15384615384615385
+  ],
+  [
+   1.0,
+   0.6315789473684211
+  ],
+  [
+   1.0,
+   0.2727272727272727
+  ],
+  [
+   1.0,
+   0.11111111111111112
+  ],
+  [
+   1.0,
+   0.45161290322580644
+  ],
+  [
+   1.0,
+   0.5833333333333334
+  ],
+  [
+   1.0,
+   0.3333333333333333
+  ],
+  [
+   1.0,
+   0.7428571428571428
+  ],
+  [
+   1.0,
+   0.5806451612903226
+  ],
+  [
+   1.0,
+   0.26666666666666666
+  ],
+  [
+   1.0,
+   0.17391304347826086
+  ],
+  [
+   1.0,
+   0.3076923076923077
+  ],
+  [
+   1.0,
+   0.15384615384615385
+  ],
+  [
+   1.0,
+   0.09999999999999999
+  ],
+  [
+   1.0,
+   0.06153846153846155
+  ],
+  [
+   1.0,
+   0.18181818181818182
+  ],
+  [
+   1.0,
+   0.16666666666666666
+  ],
+  [
+   1.0,
+   0.1111111111111111
+  ],
+  [
+   1.0,
+   0.08695652173913043
+  ],
+  [
+   1.0,
+   0.06451612903225808
+  ],
+  [
+   1.0,
+   0.25000000000000006
+  ],
+  [
+   1.0,
+   0.3333333333333333
+  ],
+  [
+   1.0,
+   0.25
+  ],
+  [
+   1.0,
+   0.3636363636363636
+  ],
+  [
+   1.0,
+   0.3636363636363636
+  ],
+  [
+   1.0,
+   0.2222222222222222
+  ]
+ ]
+}

@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Runs on the VM, skips finished steps so it can be restarted after a preemption.
+set -e  # a failed train must not fall through to evaluating a missing adapter
 cd ~ && PY=venv/bin/python
 [ -f results/base_schema_prompted.json ] || SCHEMA=1 $PY eval.py base_schema_prompted            # test, once
 [ -f results/val_base_prompted.json ] || SPLIT=validation $PY eval.py val_base_prompted
