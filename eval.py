@@ -1,4 +1,4 @@
-"""python eval.py NAME [ADAPTER_DIR] -> results/NAME.json. Greedy decoding. Env: SPLIT=validation, SCHEMA=1 (full-schema prompt)."""
+"""python eval.py NAME [ADAPTER_DIR[,ADAPTER_DIR]] -> results/NAME.json. Greedy decoding. Env: SPLIT=validation, SCHEMA=1 (full-schema prompt)."""
 import json
 import os
 import sys
@@ -19,7 +19,8 @@ model = AutoModelForImageTextToText.from_pretrained(MODEL, dtype=torch.bfloat16,
 if adapter:
     from peft import PeftModel
 
-    model = PeftModel.from_pretrained(model, adapter).merge_and_unload()
+    for a in adapter.split(","):  # comma-separated = stacked, e.g. out/sft_r8,out/grpo_150
+        model = PeftModel.from_pretrained(model, a).merge_and_unload()
 
 texts, t0 = [], time.time()
 for i in range(0, len(test), B):
