@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Spot L4 in europe-west4 that deletes itself after 6 h (disk included, so `pull` results before then).
-# Usage: ./vm.sh up | sync | setup | ssh | pull | down
+# Usage: ./vm.sh up | sync | run "cmd" | setup | ssh | pull | down
 set -e
 export CLOUDSDK_ACTIVE_CONFIG_NAME=personal
 VM=receipt-tuning Z=europe-west4-b
@@ -14,7 +14,8 @@ up)
         --boot-disk-size=200GB ;;
 sync) gcloud compute scp --zone=$Z receipts.py smoke.py $VM:~ ;;
 setup) gcloud compute ssh $VM --zone=$Z --command \
-    'nvidia-smi -L && sudo apt-get install -y -q python3-pip >/dev/null && python3 -m pip install -q --user uv && ~/.local/bin/uv venv --python 3.12 venv && ~/.local/bin/uv pip install -q --python venv/bin/python torch "transformers>=5" trl peft datasets pillow mistral-common' ;;
+    'nvidia-smi -L && curl -LsSf https://astral.sh/uv/install.sh | sh && ~/.local/bin/uv venv --python 3.12 venv && ~/.local/bin/uv pip install -q --python venv/bin/python torch torchvision "transformers>=5" trl peft datasets pillow mistral-common' ;;
+run) gcloud compute ssh $VM --zone=$Z --command "$2" ;;
 ssh) gcloud compute ssh $VM --zone=$Z ;;
 pull) gcloud compute scp --recurse --zone=$Z "$VM:~/out" "$VM:~/results" . ;;
 down) gcloud compute instances delete $VM --zone=$Z --quiet ;;

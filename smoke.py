@@ -16,7 +16,7 @@ from peft import LoraConfig  # noqa: E402
 from transformers import AutoModelForImageTextToText, AutoProcessor  # noqa: E402
 from trl import GRPOConfig, GRPOTrainer, SFTConfig, SFTTrainer  # noqa: E402
 
-processor = AutoProcessor.from_pretrained(MODEL)
+processor = AutoProcessor.from_pretrained(MODEL, fix_mistral_regex=True)
 if stage == "tokens":  # prompt length incl. image tokens; checks the processor and chat template
     msg = [{"role": "user", "content": [{"type": "image"}, {"type": "text", "text": train[0]["prompt"][0]["content"]}]}]
     text = processor.apply_chat_template(msg, add_generation_prompt=True)
