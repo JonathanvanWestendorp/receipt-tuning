@@ -2,7 +2,9 @@
 # Usage: ./vm.sh up | sync | run "cmd" | setup | ssh | pull | start | down
 set -e
 export CLOUDSDK_ACTIVE_CONFIG_NAME=personal
-VM=receipt-tuning Z=europe-west4-b
+VM=receipt-tuning
+Z=$(gcloud compute instances list --filter="name=$VM" --format='value(zone.basename())' 2>/dev/null)
+Z=${Z:-europe-west4-a}
 
 case $1 in
 up)
